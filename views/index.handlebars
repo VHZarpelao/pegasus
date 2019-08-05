@@ -1,0 +1,52 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 mx-auto">
+                <div class="card text-white bg-dark mb-3" >
+                    <div class="card-body" >
+                        <center><h1>Biografias</h1></center>
+                        <hr>
+
+                        {{#each pages}}
+                                <a href="/page/{{slug}}">
+                                    <h4>
+                                        {{title}}
+                                    </h4>
+                                </a>
+                                <u><small class="" id="card-signin">
+                                    Autor(a): {{author}}
+                                </small></u>
+                                <br>
+                                <small>{{excerpt content 500}}</small>
+                                
+                                <hr class="my-4">
+                        {{else}}
+                        <h5>
+                            Nenhuma postagem!
+                        </h5>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+
+
+<!--
+{{#each pages}}
+<div class="card">
+    <div class="card-body mt-2">
+        <a href="/page/{{slug}}"><h3>{{title}}</h3></a>
+    </div>
+</div>
+{{else}}
+<h5>Nenhuma postagem!</h5>
+{{/each}}
+-->

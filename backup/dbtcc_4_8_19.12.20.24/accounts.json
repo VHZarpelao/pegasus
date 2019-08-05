@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "5d3a62f4a99d66e9f71f30f7",
+    "userName": "alal",
+    "privilege": 1,
+    "password": "$2a$10$Ie.cwRmFAF0GewlLqqFMF.VgXCSoJQcch0uiohCJlLvDgXMKqoiqi"
+  },
+  {
+    "_id": "5d46d50c25c1a413902d4d63",
+    "privilege": 0,
+    "userName": "gestor",
+    "password": "$2a$10$DbCM4ORLEm48Zjve81EgiOOMot.YT/J.L8H54xClfcpFxQKcOvAbi",
+    "name": "aaaaa aaaaa",
+    "__v": 0
+  }
+]

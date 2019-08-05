@@ -1,0 +1,57 @@
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-7 col-lg-8 mx-auto">
+        <div class="card text-white bg-dark mb-3">
+          <div class="card-body">
+            <center>
+              <h3>Gerenciamento de contas</h3>
+            </center>
+            <div class="card-body">
+              <center>
+              <a href="/admin_panel/manageuser/add"><button class="btn btn-info">Adicionar conta de usuario</button></a>
+              </center>
+              <hr>
+              
+              {{#each accounts}}
+              {{#unless privilege}}  
+              <p><h5>{{name}}</h5><span style="font-size:0.8em">Nome de usuário: {{userName}}</span></p>
+              <div class="btn-group" role="group">
+                  <button class="btn btn-info"><a href="manageuser/edit/{{id}}">Editar</a></button>
+                  <button class="btn btn-danger" data-toggle="modal" data-target="#myModal">Apagar</button>
+              </div>
+              <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                <!-- Modal content-->
+                  <div class="modal-content text-white bg-dark mb-3">
+                    <div class="modal-header">
+                      <h4>Deseja realmente apagar esta conta?</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="">
+                          <form action="/admin_panel/manageuser/delete" method="POST">
+                            <input type="hidden" name="id" value="{{_id}}">
+                            <button class="btn btn-danger btn-space btn-spacey">Apagar Conta</button>
+                          </form>
+                        </div>
+                        <div class="">
+                          <button type="button" class="btn btn-info" data-dismiss="modal">Não, mudei de ideia</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              <hr>
+              {{/unless}}
+              {{else}}
+              <h4>Nenhum usuário cadastrado!</h4>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

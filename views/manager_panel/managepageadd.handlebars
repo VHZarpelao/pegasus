@@ -1,0 +1,33 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-9 mx-auto">
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-body">
+                        <div >
+                            <h3> Nova página</h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="/manager_panel/managepage/new" method="POST">
+                                <input type="hidden" name="date" value="{{page.date}}">
+                                <label for="title">Título: </label>
+                                <input type="text" id="title" name="title" placeholder="Título" class="form-control">
+                                <label for="content">Conteúdo: </label>
+                                <textarea name="content" class="form-control"></textarea>
+                                <br>
+                                <div class="row">
+                                    <div class="col-xs-4 btn-space btn-spacey"> 
+                                        <button type="submit"class="btn btn-info " type="submit">Adicionar página</button>
+                                    </div>
+                                    <div class="col-xs-4 btn-space"> 
+                                        <a href="/manager_panel/managepage"><button class="btn btn-danger" type="button" ">Cancelar</button></a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

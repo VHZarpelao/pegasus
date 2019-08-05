@@ -1,0 +1,26 @@
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-8 mx-auto">
+        <div class="card text-white bg-dark">
+          <div class="card-body">
+            <center>
+              <h3>Cópia de segurança</h3>
+            </center>
+            <hr>
+              <button class="btn btn-info" type="submit"><a href="/admin_panel/backup/send">Baixar Cópia de segurança</a></button>
+            <br><br>
+            <form ref='uploadForm' id='uploadForm' action="/admin_panel/backup/upload" method="post" encType="multipart/form-data">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-md btn-info">
+                  <input type="file"  name="backup">
+                </button>
+                <button type="submit" class="btn btn-md btn-info active">Aplicar Cópia de segurança</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
