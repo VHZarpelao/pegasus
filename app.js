@@ -59,7 +59,7 @@
     
     //mongoose
         mongoose.Promise = global.Promise;
-        mongoose.connect("mongodb+srv://user:tatumercantil@clustertcc-qbnmq.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true }).then(() => {
+        mongoose.connect("mongodb+srv://user:tatumercantil@clustertcc-qbnmq.mongodb.net", { useNewUrlParser: true }).then(() => {
             console.log("connected!")
         }).catch((err) => {
             console.log("connection error: "+err)
