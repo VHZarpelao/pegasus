@@ -6,6 +6,7 @@
     const fs = require('fs');
     const qr = require('qr-image');
     const router = express.Router();
+    const randomstring = require("randomstring");
     require("../models/Page")
     require("../models/Log")
 // Model
@@ -41,7 +42,7 @@ router.get("/managepage/add", isManager, (req, res) => {
 router.post("/managepage/new", isManager, (req, res) => {
     const newPage = {
         title: req.body.title,
-        slug: slugify(req.body.title),
+        slug: slugify(req.body.title) + randomstring.generate(12),
         image: slugify(req.body.title),
         content: req.body.content,
         author: req.user.name
