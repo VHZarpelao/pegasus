@@ -87,7 +87,6 @@ router.get("/managepage/edit/:id", isManager, (req, res) => {
 router.post("/managepage/edit", isManager, (req, res) => {
     Page.findOne({_id: req.body.id}).then((page) => {
         page.title = req.body.title
-        page.slug = slugify(req.body.title)
         page.content = req.body.content
 
         fs.unlinkSync(__dirname + '/../public/img/' + page.image + '.png')
