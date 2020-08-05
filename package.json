@@ -9,7 +9,7 @@
     "body-parser": "^1.18.3",
     "connect-flash": "^0.1.1",
     "express": "^4.16.4",
-    "express-fileupload": "^1.1.5",
+    "express-fileupload": "^1.1.9",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "fs-extra": "^8.1.0",
